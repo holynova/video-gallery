@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>光影集 · 视频作品展</title>
+<meta name="description" content="光影集视频作品展：6 部用代码与 AI 绘画制作的短视频，总时长 7 分 59 秒，国庆节巡礼、Transformer 原理与艾尔登法环神话，点卡片即可播放。"/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="e01c9f78-4607-4e60-b01c-77c8190b12b4"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --bg: #0b0b10;
-    --bg2: #12121a;
-    --card: #16161f;
+    --bg: #0d0b09;
+    --bg2: #14110e;
+    --card: #181410;
     --gold: #e8b04b;
-    --red: #c8402f;
     --text: #f0ead9;
-    --muted: #9a94a6;
+    --muted: #a39a8d;
   }
   body {
     background: var(--bg);
@@ -32,7 +32,7 @@
     padding: 80px 20px 60px;
     background:
       radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,176,75,.14), transparent),
-      radial-gradient(ellipse 60% 50% at 80% 110%, rgba(200,64,47,.10), transparent),
+      radial-gradient(ellipse 60% 50% at 80% 110%, rgba(232,176,75,.08), transparent),
       var(--bg);
   }
   .hero .kicker {
@@ -61,8 +61,8 @@
     justify-content: center;
   }
   .stat { text-align: center; }
-  .stat .num { font-size: 30px; font-weight: 700; color: var(--gold); }
-  .stat .label { font-size: 12px; color: var(--muted); letter-spacing: .2em; }
+  .stat .num { font-size: 24px; font-weight: 700; color: var(--gold); }
+  .stat .label { font-size: 13px; color: var(--muted); letter-spacing: .2em; }
 
   main { max-width: 1180px; margin: 0 auto; padding: 20px 24px 80px; }
 
@@ -78,17 +78,17 @@
   section.block h2::before {
     content: "";
     width: 4px; height: 22px;
-    background: linear-gradient(var(--gold), var(--red));
+    background: var(--gold);
     border-radius: 2px;
   }
-  section.block .sub { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  section.block .sub { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
 
   .featured {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
     gap: 28px;
     background: var(--bg2);
-    border: 1px solid #26262f;
+    border: 1px solid #2a2622;
     border-radius: 16px;
     overflow: hidden;
   }
@@ -96,7 +96,7 @@
   .featured .info { padding: 32px 32px 32px 4px; display: flex; flex-direction: column; justify-content: center; }
   .tag {
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     padding: 3px 12px;
     border-radius: 20px;
     border: 1px solid var(--gold);
@@ -104,9 +104,9 @@
     margin-right: 8px;
     margin-bottom: 12px;
   }
-  .tag.tech { border-color: #5b6ee1; color: #8f9bf0; }
-  .featured .info h3 { font-size: 26px; margin-bottom: 12px; }
-  .featured .info p { color: var(--muted); font-size: 15px; }
+  .tag.tech { border-color: var(--gold); color: var(--gold); background: rgba(232,176,75,.14); }
+  .featured .info h3 { font-size: 24px; margin-bottom: 12px; }
+  .featured .info p { color: var(--muted); font-size: 16px; }
 
   .grid {
     display: grid;
@@ -115,7 +115,7 @@
   }
   .card {
     background: var(--card);
-    border: 1px solid #23232c;
+    border: 1px solid #26221e;
     border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
@@ -139,18 +139,18 @@
     border-radius: 50%;
     background: rgba(232,176,75,.92);
     display: flex; align-items: center; justify-content: center;
-    font-size: 22px; color: #1a1206;
+    font-size: 24px; color: #1a1206;
     transition: transform .25s;
   }
   .card:hover .thumb .play span { transform: scale(1.12); }
   .thumb .dur {
     position: absolute; right: 10px; bottom: 10px;
     background: rgba(0,0,0,.75);
-    font-size: 12px; padding: 2px 8px; border-radius: 6px;
+    font-size: 13px; padding: 2px 8px; border-radius: 6px;
   }
   .card .body { padding: 18px 20px 22px; }
-  .card .body h3 { font-size: 18px; margin: 8px 0 8px; }
-  .card .body p { color: var(--muted); font-size: 13.5px; }
+  .card .body h3 { font-size: 16px; margin: 8px 0 8px; }
+  .card .body p { color: var(--muted); font-size: 13px; }
 
   .how {
     display: grid;
@@ -159,19 +159,19 @@
   }
   .how .item {
     background: var(--bg2);
-    border: 1px solid #23232c;
+    border: 1px solid #26221e;
     border-radius: 12px;
     padding: 24px;
   }
-  .how .item h4 { color: var(--gold); margin-bottom: 10px; font-size: 17px; }
-  .how .item p { color: var(--muted); font-size: 14px; }
+  .how .item h4 { color: var(--gold); margin-bottom: 10px; font-size: 16px; }
+  .how .item p { color: var(--muted); font-size: 16px; }
 
   footer {
     text-align: center;
     padding: 40px 20px 60px;
     color: var(--muted);
     font-size: 13px;
-    border-top: 1px solid #1c1c24;
+    border-top: 1px solid #211e1a;
   }
 
   .modal {
@@ -185,10 +185,10 @@
   .modal.open { display: flex; }
   .modal .box { width: min(1060px, 100%); }
   .modal video { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 10px; }
-  .modal .mtitle { margin-top: 14px; font-size: 18px; text-align: center; }
+  .modal .mtitle { margin-top: 14px; font-size: 16px; text-align: center; }
   .modal .close {
     position: absolute; top: 22px; right: 30px;
-    font-size: 34px; color: var(--muted);
+    font-size: 24px; color: var(--muted);
     cursor: pointer; background: none; border: none;
   }
   .modal .close:hover { color: #fff; }
@@ -202,12 +202,12 @@
 <body>
 
 <header class="hero">
-  <div class="kicker">VIDEO COLLECTION</div>
+  <div class="kicker">Video Collection</div>
   <h1>光影集</h1>
   <p>用代码与 AI 绘画生成的短视频作品展 —— 从各国国庆节，到 Transformer 原理，再到艾尔登法环的神话</p>
   <div class="stats">
     <div class="stat"><div class="num">6</div><div class="label">作品</div></div>
-    <div class="stat"><div class="num">8<span style="font-size:16px">分</span>47<span style="font-size:16px">秒</span></div><div class="label">总时长</div></div>
+    <div class="stat"><div class="num">7<span style="font-size:16px">分</span>59<span style="font-size:16px">秒</span></div><div class="label">总时长</div></div>
     <div class="stat"><div class="num">2</div><div class="label">渲染引擎</div></div>
   </div>
 </header>
@@ -255,11 +255,11 @@
 </main>
 
 <footer>
-  光影集 · 用代码制作的视频作品 &nbsp;|&nbsp; 2026 &nbsp;|&nbsp; <a href="https://github.com/holynova/video-gallery" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">GitHub 仓库</a>
+  光影集，用代码制作的视频作品 &nbsp;|&nbsp; 2026 &nbsp;|&nbsp; <a href="https://github.com/holynova/video-gallery" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">GitHub 仓库</a>
 </footer>
 
 <div class="modal" id="modal">
-  <button class="close" id="closeBtn">×</button>
+  <button class="close" id="closeBtn" aria-label="关闭">×</button>
   <div class="box">
     <video id="modalVideo" controls playsinline></video>
     <div class="mtitle" id="modalTitle"></div>
@@ -322,6 +322,10 @@ const grid = document.getElementById("grid");
 videos.forEach(v => {
   const card = document.createElement("div");
   card.className = "card";
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", "播放" + v.title);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(v); } });
   card.innerHTML = `
     <div class="thumb">
       <img src="${v.poster}" alt="${v.title}" loading="lazy">

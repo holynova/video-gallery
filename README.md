@@ -8,10 +8,10 @@ English: Video exhibition website featuring short films rendered programmaticall
 
 ## 在线体验 / Live Demo
 
-- [Cloudflare Demo](https://video-gallery.xiaosang.cc/)
+- [在线体验](https://xiaosang.cc/video-gallery/)
 - [GitHub Repo](https://github.com/holynova/video-gallery)
 
-<img src="./assets/qr.png" width="180" alt="扫码访问 Cloudflare 在线体验">
+<img src="./assets/qr.png" width="180" alt="扫码访问在线体验">
 
 ## 本地运行 / Run locally
 
@@ -25,6 +25,6 @@ open index.html
 npx wrangler deploy --config wrangler.jsonc
 ```
 
-Cloudflare Workers · Custom Domain: `video-gallery.xiaosang.cc`
+Cloudflare Workers · 路由：`xiaosang.cc/video-gallery/`（旧子域名 `video-gallery.xiaosang.cc` 已停用）
 
 源码与部署配置使用同一个主分支；在本地手动发布，不创建 Cloudflare 专用分支或 GitHub Action。
